@@ -39,5 +39,6 @@ class MultiplayerHouse
                 Console.WriteLine(familiya[kvartira]);
             }
         }
+        Console.ReadKey(true);
     }
 }
