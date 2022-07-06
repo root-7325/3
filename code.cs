@@ -25,7 +25,10 @@ class MultiplayerHouse
             if (kvartira > 9 || forexception == 1)
             {
                 Console.WriteLine("Wrong number!");
-                forexception--;
+                if(forexception != 0)
+                {
+                    forexception--;
+                }
                 if (i != 0)
                 {
                     i--;
