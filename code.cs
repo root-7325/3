@@ -21,12 +21,14 @@ class ApartmentBuilding
                 flat = Convert.ToInt32(Console.ReadLine()) - 1;
             }
 
-            catch (System.FormatException)
+            catch (System.FormatException)  
             {
                 x++;
             }
+
             finally
             {
+
                 if (flat > 9 || x == 1)
                 {
                     Console.WriteLine("Wrong number!");
@@ -38,9 +40,11 @@ class ApartmentBuilding
                 {
                     Console.WriteLine(surname[flat]);
                 }
+
             }
 
         }
+
         Console.ReadKey(true);
     }
 }
