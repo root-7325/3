@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 class ApartmentBuilding
 {
     static void Main()
@@ -11,36 +11,20 @@ class ApartmentBuilding
         }
 
         Console.WriteLine("Enter 3 flats");
-        int flat = 0;
-        int x = 0;
         for (int i = 0; i < 3; i++)
         {
 
             try
             {
-                flat = Convert.ToInt32(Console.ReadLine()) - 1;
+                int flat = Convert.ToInt32(Console.ReadLine()) - 1;
+                if (flat >= 10 || flat <= 0) throw new Exception("Wrong number!");
+
+                System.Console.WriteLine(surname[flat]);
             }
 
-            catch (System.FormatException)
+            catch (Exception x)
             {
-                x++;
-            }
-
-            finally
-            {
-
-                if (flat > 9 || x == 1)
-                {
-                    Console.WriteLine("Wrong number!");
-                    x--;
-                    i--;
-                }
-
-                else
-                {
-                    Console.WriteLine(surname[flat]);
-                }
-
+                System.Console.WriteLine(x.Message);
             }
 
         }
