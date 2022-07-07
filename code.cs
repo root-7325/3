@@ -21,7 +21,7 @@ class ApartmentBuilding
                 flat = Convert.ToInt32(Console.ReadLine()) - 1;
             }
 
-            catch (System.FormatException)  
+            catch (System.FormatException)
             {
                 x++;
             }
