@@ -1,46 +1,43 @@
 using System;
-class MultiplayerHouse
+class ApartmentBuilding
 {
     static void Main()
     {
-        string[] familiya = new string[10];
-        int kvartira = 0;
-        int forexception = 0;
-        Console.WriteLine("Input 10 familiy");
+        string[] surname = new string[10];
+        Console.WriteLine("Enter 10 surnames");
         for (int i = 0; i < 10; i++)
         {
-            familiya[i] = Console.ReadLine();
+            surname[i] = Console.ReadLine();
         }
 
-        Console.WriteLine("Input 3 kvartir");
-
+        Console.WriteLine("Enter 3 flats");
+        int flat = 0;
+        int x = 0;
         for (int i = 0; i < 3; i++)
         {
 
             try
             {
-                kvartira = Convert.ToInt32(Console.ReadLine()) - 1;
+                flat = Convert.ToInt32(Console.ReadLine()) - 1;
             }
 
             catch (System.FormatException)
             {
-                forexception++;
+                x++;
             }
-
-            if (kvartira > 9 || forexception == 1)
+            finally
             {
-                Console.WriteLine("Wrong number!");
-                i--;
-                if (forexception != 0)
+                if (flat > 9 || x == 1)
                 {
-                    forexception--;
+                    Console.WriteLine("Wrong number!");
+                    x--;
+                    i--;
                 }
 
-            }
-
-            else
-            {
-                Console.WriteLine(familiya[kvartira]);
+                else
+                {
+                    Console.WriteLine(surname[flat]);
+                }
             }
 
         }
